@@ -80,15 +80,42 @@ Preferred communication style: Simple, everyday language.
 
 # Deployment Options
 
-## Option 1: Replit Deployment (Recommended)
+## Option 1: Replit Deployment (Recommended for Development)
 - Click the "Deploy" button in the Replit interface
 - Choose Autoscale or Reserved VM deployment
 - Database and environment variables are automatically configured
 - Zero-configuration deployment with built-in scaling
 
-## Option 2: External Deployment (Render, Vercel, etc.)
-- Files prepared: `render.yaml`, `Dockerfile`
-- Build command: `npm run build`
+## Option 2: External Deployment Platforms
+
+### Render (Easiest - Recommended for Beginners)
+- Files prepared: `render.yaml`, `Dockerfile`, `deploy-to-render.md`
+- Build command: `npm install && npm run build`
 - Start command: `npm start`
-- Environment variables needed: `DATABASE_URL`, `OPENAI_API_KEY`, `NODE_ENV`
-- PostgreSQL database required (can use Render's managed PostgreSQL)
+- Managed PostgreSQL database included
+- Automatic SSL certificates and deployments from GitHub
+- Cost: Free tier available, $7/month for production
+
+### Hostinger VPS (Best Value)
+- Complete setup guide: `deploy-to-hostinger-vps.md`
+- Full server control with SSH access
+- Manual PostgreSQL setup and Nginx configuration
+- Requires basic Linux server management skills
+- Cost: $3.99-$15.99/month for VPS hosting
+
+### Amazon Web Services (Enterprise Grade)
+- Comprehensive guide: `deploy-to-aws.md`
+- Professional infrastructure with EC2, RDS, CloudFront, Load Balancers
+- Auto-scaling, advanced monitoring, and global CDN
+- Requires AWS expertise and infrastructure management
+- Cost: Free tier first year, $60-200+/month production
+
+### Platform Comparison
+- See `deployment-comparison.md` for detailed feature and cost comparison
+- Migration path: Start with Render → Move to Hostinger VPS → Scale to AWS
+
+## Required Environment Variables
+- `DATABASE_URL`: PostgreSQL connection string
+- `OPENAI_API_KEY`: OpenAI API key for story generation
+- `NODE_ENV`: production
+- `PORT`: Server port (default: 5000)
