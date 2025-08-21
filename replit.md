@@ -77,3 +77,18 @@ Preferred communication style: Simple, everyday language.
 - **date-fns**: Date manipulation and formatting
 - **nanoid**: Unique ID generation
 - **clsx** & **tailwind-merge**: Conditional CSS class handling
+
+# Deployment Options
+
+## Option 1: Replit Deployment (Recommended)
+- Click the "Deploy" button in the Replit interface
+- Choose Autoscale or Reserved VM deployment
+- Database and environment variables are automatically configured
+- Zero-configuration deployment with built-in scaling
+
+## Option 2: External Deployment (Render, Vercel, etc.)
+- Files prepared: `render.yaml`, `Dockerfile`
+- Build command: `npm run build`
+- Start command: `npm start`
+- Environment variables needed: `DATABASE_URL`, `OPENAI_API_KEY`, `NODE_ENV`
+- PostgreSQL database required (can use Render's managed PostgreSQL)

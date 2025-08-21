@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: storymagic-app
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: NODE_ENV
+        value: production
+    autoDeploy: false
+
+databases:
+  - name: storymagic-db
+    databaseName: storymagic
+    user: storymagic
