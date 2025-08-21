@@ -1,7 +1,7 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { generateStory, generateTextToSpeech } from "./openai";
+import { generateStory, generateTextToSpeech } from "./openai.js";
 import { insertStorySchema } from "@shared/schema";
 import { z } from "zod";
 
