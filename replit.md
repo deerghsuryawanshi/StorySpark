@@ -110,9 +110,17 @@ Preferred communication style: Simple, everyday language.
 - Requires AWS expertise and infrastructure management
 - Cost: Free tier first year, $60-200+/month production
 
+### Vercel (Modern Frontend Platform)
+- Guides: `deploy-to-vercel.md`, `vercel-quick-deploy.md`
+- Excellent for frontend with global CDN and edge functions
+- Serverless architecture requiring backend adaptation
+- Hybrid option: Frontend on Vercel + Backend on Railway
+- Cost: Free tier available, $20/month for teams
+
 ### Platform Comparison
 - See `deployment-comparison.md` for detailed feature and cost comparison
 - Migration path: Start with Render → Move to Hostinger VPS → Scale to AWS
+- Quick modern option: Vercel (frontend) + Railway (backend)
 
 ## Required Environment Variables
 - `DATABASE_URL`: PostgreSQL connection string
