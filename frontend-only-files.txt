@@ -17,6 +17,9 @@ When creating your `storymagic-frontend` repository, copy these files:
 ## Use This as package.json:
 - Use the contents from `package-frontend.json`
 
+## Use This as vercel.json:
+- Use the contents from `vercel-frontend-only.json`
+
 ## Create These New Files:
 1. `.gitignore`:
 ```
@@ -56,6 +59,7 @@ storymagic-frontend/
 ├── tsconfig.json
 ├── index.html
 ├── package.json
+├── vercel.json
 ├── .gitignore
 └── README.md
 ```

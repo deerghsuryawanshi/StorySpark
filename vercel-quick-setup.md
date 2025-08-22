@@ -60,7 +60,8 @@ https://your-app-name.railway.app
    ├── vite.config.ts
    ├── tsconfig.json
    ├── index.html (from client/)
-   └── package.json (use package-frontend.json)
+   ├── package.json (use package-frontend.json)
+   └── vercel.json (use vercel-frontend-only.json)
    ```
 
 ### 3.2 Update API Configuration
