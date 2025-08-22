@@ -1,0 +1,63 @@
+# Files to Copy for Frontend-Only Repository
+
+When creating your `storymagic-frontend` repository, copy these files:
+
+## From Root Directory:
+- components.json
+- tailwind.config.ts  
+- postcss.config.js
+- tsconfig.json
+
+## From client/ Directory:
+- Copy client/src/ → src/
+- Copy client/public/ → public/
+- Copy client/index.html → index.html
+- Copy client/vite.config.ts → vite.config.ts
+
+## Use This as package.json:
+- Use the contents from `package-frontend.json`
+
+## Create These New Files:
+1. `.gitignore`:
+```
+node_modules/
+dist/
+.env
+.env.local
+.DS_Store
+```
+
+2. `README.md`:
+```markdown
+# StoryMagic Frontend
+
+Frontend for the AI-powered children's story generator.
+
+## Development
+npm install
+npm run dev
+
+## Build
+npm run build
+```
+
+## Update API Configuration:
+In `src/lib/queryClient.ts`, change the API base URL to your Railway backend URL.
+
+## Final Structure:
+```
+storymagic-frontend/
+├── src/
+├── public/
+├── components.json
+├── tailwind.config.ts
+├── postcss.config.js
+├── vite.config.ts
+├── tsconfig.json
+├── index.html
+├── package.json
+├── .gitignore
+└── README.md
+```
+
+This creates a clean frontend-only repository ready for Vercel deployment.
