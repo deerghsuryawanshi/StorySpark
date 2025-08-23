@@ -114,7 +114,7 @@ nano .env
 
 # Add these variables:
 NODE_ENV=production
-PORT=3000
+PORT=5000
 DATABASE_URL=postgresql://storymagic:your_secure_password@localhost:5432/storymagic
 OPENAI_API_KEY=your_openai_api_key_here
 ```
@@ -138,7 +138,7 @@ server {
     server_name YOUR_DOMAIN_OR_IP;
 
     location / {
-        proxy_pass http://localhost:3000;
+        proxy_pass http://localhost:5000;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';
@@ -166,28 +166,13 @@ systemctl restart nginx
 ## Step 6: Start Application with PM2
 
 ### 6.1 Create PM2 Configuration
-```bash
-# Create PM2 ecosystem file
-nano ecosystem.config.js
+The PM2 configuration file (ecosystem.config.js) is already included in your project. It's configured to:
+- Run in cluster mode for better performance
+- Use port 5000 (matching your app configuration)
+- Handle automatic restarts and logging
+- Restart on high memory usage
 
-# Add this configuration:
-module.exports = {
-  apps: [{
-    name: 'storymagic',
-    script: 'server/index.js',
-    instances: 'max',
-    exec_mode: 'cluster',
-    env: {
-      NODE_ENV: 'production',
-      PORT: 3000
-    },
-    error_file: './logs/err.log',
-    out_file: './logs/out.log',
-    log_file: './logs/combined.log',
-    time: true
-  }]
-}
-```
+If you need to modify it, the file is already set up correctly for your application.
 
 ### 6.2 Start Application
 ```bash
@@ -300,7 +285,7 @@ crontab -e
 pm2 logs storymagic
 
 # Check if port is in use
-netstat -tulpn | grep :3000
+netstat -tulpn | grep :5000
 ```
 
 **Database connection issues:**
