@@ -1,0 +1,33 @@
+/var/www/StorySpark/logs/err-0.log last 15 lines:
+0|storymag |     at validateString (node:internal/validators:162:11)
+0|storymag |     at Object.resolve (node:path:1115:7)
+0|storymag |     at file:///var/www/StorySpark/dist/index.js:408:17
+0|storymag |     at ModuleJob.run (node:internal/modules/esm/module_job:195:25)
+0|storymag |     at async ModuleLoader.import (node:internal/modules/esm/loader:337:24)
+0|storymag |     at async importModuleDynamicallyWrapper (node:internal/vm/module:432:15)
+0|storymag | You have triggered an unhandledRejection, you may have forgotten to catch a Promise rejection:
+0|storymag | TypeError [ERR_INVALID_ARG_TYPE]: The "paths[0]" argument must be of type string. Received undefined
+0|storymag |     at new NodeError (node:internal/errors:405:5)
+0|storymag |     at validateString (node:internal/validators:162:11)
+0|storymag |     at Object.resolve (node:path:1115:7)
+0|storymag |     at file:///var/www/StorySpark/dist/index.js:408:17
+0|storymag |     at ModuleJob.run (node:internal/modules/esm/module_job:195:25)
+0|storymag |     at async ModuleLoader.import (node:internal/modules/esm/loader:337:24)
+0|storymag |     at async importModuleDynamicallyWrapper (node:internal/vm/module:432:15)
+
+/var/www/StorySpark/logs/err-1.log last 15 lines:
+1|storymag |     at validateString (node:internal/validators:162:11)
+1|storymag |     at Object.resolve (node:path:1115:7)
+1|storymag |     at file:///var/www/StorySpark/dist/index.js:408:17
+1|storymag |     at ModuleJob.run (node:internal/modules/esm/module_job:195:25)
+1|storymag |     at async ModuleLoader.import (node:internal/modules/esm/loader:337:24)
+1|storymag |     at async importModuleDynamicallyWrapper (node:internal/vm/module:432:15)
+1|storymag | You have triggered an unhandledRejection, you may have forgotten to catch a Promise rejection:
+1|storymag | TypeError [ERR_INVALID_ARG_TYPE]: The "paths[0]" argument must be of type string. Received undefined
+1|storymag |     at new NodeError (node:internal/errors:405:5)
+1|storymag |     at validateString (node:internal/validators:162:11)
+1|storymag |     at Object.resolve (node:path:1115:7)
+1|storymag |     at file:///var/www/StorySpark/dist/index.js:408:17
+1|storymag |     at ModuleJob.run (node:internal/modules/esm/module_job:195:25)
+1|storymag |     at async ModuleLoader.import (node:internal/modules/esm/loader:337:24)
+1|storymag |     at async importModuleDynamicallyWrapper (node:internal/vm/module:432:15)

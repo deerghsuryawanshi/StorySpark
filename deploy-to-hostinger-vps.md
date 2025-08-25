@@ -103,8 +103,8 @@ chown -R www-data:www-data /var/www/storymagic-app
 # Install Node.js dependencies
 npm install
 
-# Build the application
-npm run build
+# Build the application for production (fixes deployment issues)
+node build-production.js
 ```
 
 ### 4.3 Set Up Environment Variables
@@ -172,7 +172,7 @@ The PM2 configuration file (ecosystem.config.js) is already included in your pro
 - Handle automatic restarts and logging
 - Restart on high memory usage
 
-If you need to modify it, the file is already set up correctly for your application.
+**Important**: The configuration is set up to run the production-optimized build that fixes path resolution issues in VPS deployment.
 
 ### 6.2 Start Application
 ```bash
